@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    </title>
+</head>
+
+<style>
+    html {
+        background-color: aqua;
+    }
+</style>
+
+
+
+<body>
+    {% block content %}
+    {% if data %}
+    <table>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Дата рождение</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    {% if title != 'О нас' %}
+    <h3><a href="/about">О нас</a></h3>
+    {% endif %}
+    {% if title != 'Главная страница' %}
+    <h3><a href="/">Главная</a></h3>
+    {% endif %}
+    {% if title != 'Регистрация' %}
+    <h3><a href="/register">Регистрация</a></h3>
+    {% endif %}
+    <h3><a href="/login">Авторизация</a></h3>
+    {% endblock %}
+
+</body>
+
+</html>

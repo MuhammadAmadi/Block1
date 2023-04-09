@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="post">
+    {% if form %}
+    {{ form.csrf_token }}
+
+    {{ form.name.label }}
+    {{ form.name() }}
+    <br>
+    {{ form.email.label }}
+    {{ form.email() }}
+    <br>
+    {{ form.password.label }}
+    {{ form.password() }}
+    <br>
+    {{ form.passwordRepeat.label }}
+    {{ form.passwordRepeat() }}
+    <br>
+    {{ form.saveMe.label }}
+    {{ form.saveMe() }}
+    <br>
+    {{ form.submit() }}
+    {% endif %}
+    {% if message == 'Успех' %}
+        <h3><a href="/login">Авторизация</a></h3>
+    {% endif %}
+    {{ message }}
+    <h3><a href="/login">Авторизация</a></h3>
+    <h3><a href="/">Главная</a></h3>
+    <h3><a href="/about">О нас</a></h3>
+
+</form>
+
+{% endblock %}
