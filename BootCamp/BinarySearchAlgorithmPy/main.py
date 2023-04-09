@@ -118,10 +118,10 @@ def up_limit():
     global up_cost
     up_cost = federation_budget
     for rb in region_budget:
-        print(f"rb {rb}")
+        # print(f"rb {rb}")
         # up_cost += rb
-        print(f"регион бюджет {region_budget[0]}")
-        print(f"up_cost {up_cost}")
+        # print(f"регион бюджет {region_budget[0]}")
+        # print(f"up_cost {up_cost}")
         up_cost += region_budget[0]
 
 
