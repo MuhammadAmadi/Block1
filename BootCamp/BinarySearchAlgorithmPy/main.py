@@ -68,8 +68,8 @@ name.append(["приобретение базы (г.Находка)", "прио�
 projects_in_region = [2, 1, 4, 2, 2, 3, 2, 1, 3]
 regions = 9
 
-count_populations = 10000
-count_generations = 10000
+count_populations = 1000
+count_generations = 1000
 
 populations = []
 generations = []
