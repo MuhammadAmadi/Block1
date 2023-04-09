@@ -68,8 +68,8 @@ name.append(["приобретение базы (г.Находка)", "прио�
 projects_in_region = [2, 1, 4, 2, 2, 3, 2, 1, 3]
 regions = 9
 
-count_populations = 1000
-count_generations = 1000
+count_populations = 100
+count_generations = 100
 
 populations = []
 generations = []
@@ -118,10 +118,11 @@ def up_limit():
     global up_cost
     up_cost = federation_budget
     for rb in region_budget:
-        # print(rb)
-        up_cost += rb
-        # print(region_budget[0])
-        # up_cost += region_budget[0]
+        print(f"rb {rb}")
+        # up_cost += rb
+        print(f"регион бюджет {region_budget[0]}")
+        print(f"up_cost {up_cost}")
+        up_cost += region_budget[0]
 
 
 def test_costs(x):
