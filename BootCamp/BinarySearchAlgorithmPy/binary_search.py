@@ -5,7 +5,7 @@ x = randint(0, 100)
 count_perebor = 0
 # метод последовательного перебора
 for i in range(0, 101):
-    count_perebor = 1
+    count_perebor += 1
     if i == x:
         print("Число найдено!")
         break
@@ -18,7 +18,7 @@ count_random = 1
 y = randint(0, 100)
 while x != y:
     y = randint(0, 100)
-    count_random = 1
+    count_random += 1
 
 # print("Загаданное число было ",x, " и для его поиска угадыванием потребовалось ", count_random, " итераций ")
 
@@ -50,5 +50,5 @@ while x != mid:
         left = mid + 1
     mid = (right + left) // 2
 # y = int(input('Введи число'))
-    count_bin = 1
+    count_bin += 1
 print("Загаданное число было ", x, " и для его поиска бинарным алгоритмом потребовалось ", count_bin, " итераций ")
